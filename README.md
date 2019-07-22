@@ -3,37 +3,44 @@
 URL for heroku app - https://gentle-river-26276.herokuapp.com/
 
 Instructions - 
-Open the URL given
-The accuracy of the classification model is reported on the left hand side
-Put the URL for the post whose flair is to be predicted on the right hand side
-Click 'submit' and it will show you the predicted flair
-Open https://gentle-river-26276.herokuapp.com/graphs for Interactive Graph of comments and upvotes of a flair
-Run setupDB.py to refresh the database with new entries (make sure to clear previous one)
+1. Open the URL given
+2. The accuracy of the classification model is reported on the left hand side
+3. Put the URL for the post whose flair is to be predicted on the right hand side
+4. Click 'submit' and it will show you the predicted flair
+5. Open https://gentle-river-26276.herokuapp.com/graphs for Interactive Graph of comments and upvotes of a flair
+6. Run setupDB.py to refresh the database with new entries (make sure to clear previous one)
 
 Sources - 
-https://medium.com/@gitaumoses4/deploying-a-flask-application-on-heroku-e509e5c76524
-http://pygal.org/en/stable/documentation/output.html#png
-http://t-redactyl.io/blog/2015/11/analysing-reddit-data-part-2-extracting-the-data.html
+* https://medium.com/@gitaumoses4/deploying-a-flask-application-on-heroku-e509e5c76524
+* http://pygal.org/en/stable/documentation/output.html#png
+* http://t-redactyl.io/blog/2015/11/analysing-reddit-data-part-2-extracting-the-data.html
 
 Approach followed -
-TBD
+1. The data is collected from the reddit/india site and saved in a mongoDB database.
+2. The data is then split in testing and training and Naivebayes classification is used to train it.
+3. Data is experimented with Gaussian, Multinomial and Bernoulli NaiveBayes.
+4. Best is taken and a predict function is made.
+5. This function is trained on the whole dataset (1068 entries).
+6. It returns the predicted FLAIR which is shown on the webpage.
+7. The data collected can also be used for answering questions like which flair gets more upvotes vs which gets more comments.
+8. For that particular query, a interactive graph is made using pygal.
 
 Directory Structure -
-Run webapp2.py with flask to test it locally
-Open URL given above to test it on heroku
-/static contains the css files
-/templates contains the html files
+* Run webapp2.py with flask to test it locally
+* Open URL given above to test it on heroku
+* /static contains the css files
+* /templates contains the html files
 
 Dependencies -
-Flask
-pymongo
-pygal
-scikit-learn
-gunicorn
+* Flask
+* pymongo
+* pygal
+* scikit-learn
+* gunicorn
 
 Codebase -
-webapp2.py - to run the application
-setupDB.py -  to setup the mongoDB database
+1. webapp2.py - to run the application
+2. setupDB.py -  to setup the mongoDB database
 
 PIP libraries used - 
 cairocffi==1.0.2
