@@ -1,5 +1,44 @@
 # Flair_detector
+NEW README ->
+Use case -> Flair prediction
+Datasource -> reddit api
 
+Technology/framework for each concrete -
+1. Initial data exploration - urllib, json, jupyter notebook
+2. ETL - 
+3. Feature creation -
+4. Model defination -
+5. Model training - 
+6. Model evaluation - 
+7. Model deployment - 
+
+
+Naming convention
+
+[project_name].data_exp.<technology>.<version>.<extension>
+[project_name].etl.<technology>.<version>.<extension>
+[project_name].feature_eng.<technology>.<version>.<extension>
+[project_name].model_def.<technology>.<version>.<extension>
+[project_name].model_train.<technology>.<version>.<extension>
+[project_name].model_evaluate.<technology>.<version>.<extension>
+[project_name].model_deployment.<technology>.<version>.<extension>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OLD README ->
 URL for heroku app - https://gentle-river-26276.herokuapp.com/
 
 Instructions - 
